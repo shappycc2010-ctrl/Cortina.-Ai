@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halobot - Your Personal AI Assistant</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halobot 🤖</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>🤖 Halobot</h1>
-    <p>Your personal AI assistant</p>
+    <p>Your AI-powered assistant (static demo)</p>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Welcome to Halobot</h2>
-      <p>Halobot is your smart AI assistant designed to make your life easier, more productive, and more fun.</p>
-      <button onclick="startHalobot()">Try Halobot</button>
-    </section>
+    <div id="chatbox">
+      <div id="messages"></div>
+      <input type="text" id="userInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Halobot. All rights reserved.</p>
+    <p>© 2025 Halobot | Static Demo</p>
   </footer>
 
   <script src="script.js"></script>
