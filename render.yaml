@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: cortina-api
+    env: docker
+    branch: main
+    repo: https://github.com/YOUR_ORG/YOUR_REPO
+    plan: starter
+    buildCommand: ""
+    startCommand: "uvicorn app_rag_lora:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: REACT_APP_API_URL
+        value: "https://cortina-api.onrender.com"
+  - type: static
+    name: cortina-ui
+    env: node
+    branch: main
+    repo: https://github.com/YOUR_ORG/YOUR_REPO
+    staticPublishPath: ui/build
+    buildCommand: "cd ui && npm ci && npm run build"
+    envVars:
+      - key: REACT_APP_API_URL
+        value: "https://cortina-api.onrender.com"
+databases: []
